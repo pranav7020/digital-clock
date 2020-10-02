@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(32, 35, 48);
+}
+
+.seven-segment {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 80vw;
+    height: auto;
+    padding: 3vw;
+    border: .25vw solid white;
+    border-radius: 2vw;
+    box-shadow: 0 0 .8vw white, 0 0 .8vw white inset;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        padding: 1.5vw;
+    }
+
+    .dots {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 2vw;
+
+        .dot {
+            width: 1.5vw;
+            height: 1.5vw;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+    }
+}
+
+@keyframes blink {
+    from {
+        background-color: none;
+    }
+
+    to {
+        background-color: white;
+    }
+}

@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #202330;
+}
+
+.seven-segment {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80vw;
+  height: auto;
+  padding: 3vw;
+  border: .25vw solid white;
+  border-radius: 2vw;
+  -webkit-box-shadow: 0 0 .8vw white, 0 0 .8vw white inset;
+          box-shadow: 0 0 .8vw white, 0 0 .8vw white inset;
+}
+
+.seven-segment svg {
+  width: 100%;
+  height: 100%;
+  padding: 1.5vw;
+}
+
+.seven-segment .dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2vw;
+}
+
+.seven-segment .dots .dot {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+
+@-webkit-keyframes blink {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@keyframes blink {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: white;
+  }
+}
+/*# sourceMappingURL=style.css.map */
